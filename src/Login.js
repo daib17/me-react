@@ -27,7 +27,7 @@ class Login extends React.Component {
         event.preventDefault();
         if (this.state.user && this.state.pass) {
             let that = this;
-            fetch("http://localhost:8333/login/" + this.state.user + "/" + this.state.pass, {
+            fetch("https://me-api.daib17.me/login/" + this.state.user + "/" + this.state.pass, {
                 method: "post"
             })
                 .then(function (response) {
@@ -39,13 +39,13 @@ class Login extends React.Component {
                         that.props.history.push("/login");
                     } else {
                         that.setState({
-                            error: "User or password not valid."
+                            error: "User and/or password not valid."
                         });
                     }
                 });
         } else {
             this.setState({
-                error: "Enter username and password"
+                error: "Enter username and password."
             });
         }
     }
@@ -55,7 +55,9 @@ class Login extends React.Component {
             return (
                 <div className="main">
                     <h1>Login</h1>
-                    <p>User has logged in successfully.</p>
+                    <br />
+                    <p>User has successfully logged in.</p>
+                    <p>New reports can be added via Reports->New</p>
                 </div>
             );
         } else {
@@ -80,7 +82,8 @@ class Login extends React.Component {
                         <br />
                         <Button color="primary">Log in</Button>
                     </form>
-                    <p>{this.state.error}</p>
+                    <br />
+                    <p className="error">{this.state.error}</p>
                 </div>
             );
         }

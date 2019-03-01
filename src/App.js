@@ -35,12 +35,10 @@ class App extends Component {
                         <NavBar token={this.state.token} />
                         <Route exact path="/" render={props => <Me />} />
                         <Route path="/report/:kmom" component={Report} />
-                        <Route path="/addreport" component={ReportForm} />
+                        <Route path="/addreport" render={props => <ReportForm token={this.state.token} />} />
                         <Route path="/login" render={props => <Login onTokenChanged={this.onTokenChanged} token={this.state.token} />} />
                         <Route path="/logout" render={props => <Logout onTokenChanged={this.onTokenChanged} />} />
                         <Route exact path="/error" render={props => <Error />} />
-                        <br />
-                        <p>token: {this.state.token}</p>
                     </div>
                 </Router>
             </div >

@@ -17,7 +17,6 @@ class NavBar extends React.Component {
         let addReport;
         let divider;
         let button;
-        console.log(this.props.token);
         if (this.props.token) {
             divider = <DropdownItem divider />;
             addReport = <Link className="nav-link" to="/addreport">New</Link>;

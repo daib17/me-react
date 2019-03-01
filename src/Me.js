@@ -10,7 +10,7 @@ class Me extends Component {
 
     componentDidMount() {
         let that = this;
-        fetch("http://localhost:8333/")
+        fetch("https://me-api.daib17.me/")
             .then(function (response) {
                 return response.json();
             })
