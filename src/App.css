@@ -6,12 +6,7 @@ html {
 }
 
 h1 {
-    font-size: 8em;
-    font-weight: 100;
-}
-
-h2 {
-    font-size: 6em;
+    font-size: 4em;
     font-weight: 100;
 }
 
@@ -20,17 +15,18 @@ p {
     font-weight: normal;
 }
 
-h2 {
-  text-transform: uppercase;
-}
-
 img {
   float: right;
   width: 5rem;
 }
 
 hr {
-    color: white;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 .navbar {

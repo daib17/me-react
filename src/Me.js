@@ -25,6 +25,7 @@ class Me extends Component {
         return (
             <div className="main">
                 <h1>Me</h1>
+                <hr />
                 <p>{this.state.desc}</p>
             </div>
         );

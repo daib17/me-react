@@ -55,7 +55,7 @@ class Login extends React.Component {
             return (
                 <div className="main">
                     <h1>Login</h1>
-                    <br />
+                    <hr />
                     <p>User has successfully logged in.</p>
                     <p>New reports can be added via Reports->New</p>
                 </div>
@@ -64,6 +64,7 @@ class Login extends React.Component {
             return (
                 <div className="main">
                     <h1>Sign in</h1>
+                    <hr />
                     <br />
                     <form onSubmit={this.handleSubmit} className="w-50">
                         <Input

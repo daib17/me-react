@@ -9,8 +9,6 @@ import Login from './Login.js';
 import Logout from './Logout.js';
 import Error from './Error.js';
 
-import './App.css';
-
 
 class App extends Component {
     constructor(props) {
